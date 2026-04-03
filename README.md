@@ -1,3 +1,5 @@
+Template taken from [siph/resume-md](https://github.com/siph/resume-md).
+
 # Resume-md
 
 This project allows you to write and maintain your resume in markdown. GitHub
