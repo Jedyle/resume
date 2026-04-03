@@ -1,15 +1,11 @@
+Template taken from [siph/resume-md](https://github.com/siph/resume-md).
+
 # Resume-md
 
 This project allows you to write and maintain your resume in markdown. GitHub
 Actions is used to generate stylized PDF and HTML files based on `resume.md`
 and `style.css`. The stylized files are found as outputs in the `Releases`
 section, the HTML file is also deployed as a static website using GitHub Pages.
-
-This project is useful for anyone looking to create a professional-looking
-resume quickly and easily, and is especially beneficial for those with
-technical backgrounds who are familiar with markdown. With this project, you
-can focus on the content of your resume rather than worrying about formatting
-and deployment.
 
 
 ## Usage
@@ -29,22 +25,43 @@ the HTML file as a static website.
 
 ### Local
 
-`Resume-md` uses [`nix`](https://www.nixos.org) to manage all dependencies and
-to produce build outputs. As a result, any machine with `nix` installed can run
-a simple build command to produce the stylized resumes.
+`Resume-md` uses [Docker](https://www.docker.com) and [`just`](https://github.com/casey/just) to build the resume locally.
+
 ```shell
-nix build
+just build
 ```
 
-This will place the stylized files along side the original markdown file in
-`result/resume/`:
-```shell
- result
-└──  resume
-    ├──  resume.html
-    ├──  resume.md
-    └──  resume.pdf
+Output files are placed in `out/`:
 ```
+out/
+├── resume.html
+├── resume.md
+└── resume.pdf
+```
+
+
+## Public / Private versions
+
+The resume supports two build variants: a **public** version (without phone number) and a
+**private** version (with phone number, for recruiters).
+
+The contact line in `resume.md` contains a `__PHONE_ENTRY__` placeholder that is substituted at build time.
+
+### Locally
+
+```shell
+just build-private "+33 6 XX XX XX XX"
+```
+
+### GitHub Actions
+
+Store your phone number as a GitHub Actions secret named `PHONE_NUMBER` under
+`Settings` -> `Secrets and variables` -> `Actions`.
+
+On every push to `master`, the workflow builds both versions:
+- **Public** — placeholder stripped, deployed to GitHub Pages and published in Releases.
+- **Private** — phone number included, uploaded as the `resume-private` artifact (only accessible to repo owners).
+
 
 ## GitHub Pages
 

@@ -3,29 +3,27 @@ on:
   push:
     branches:
       - master
-    paths:
-      - flake.*
-      - resume.md
-      - style.css
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v6
-    - uses: cachix/install-nix-action@v31
-      with:
-        github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build Resumes
-      run: |
-        mkdir out
-        nix build
-        cp result/resume/resume.html out/${{ github.actor}}_resume.html
-        cp result/resume/resume.pdf out/${{ github.actor}}_resume.pdf
-        cp result/resume/resume.md out/${{ github.actor}}_resume.md
-    - name: Store Artifacts
+    - uses: extractions/setup-just@v2
+    - name: Build Public Resume
+      run: just build
+    - name: Store Public Artifacts
       uses: actions/upload-artifact@v7
       with:
         name: resume
+        path: out/
+    - name: Build Private Resume
+      env:
+        PHONE: ${{ secrets.PHONE_NUMBER }}
+      run: just build-private "$PHONE"
+    - name: Store Private Artifacts
+      uses: actions/upload-artifact@v7
+      with:
+        name: resume-private
         path: out/
   publish:
     runs-on: ubuntu-latest
@@ -40,7 +38,7 @@ jobs:
     - name: Stage
       run: |
         mkdir public
-        cp out/${{ github.actor }}_resume.html public/index.html
+        cp out/resume.html public/index.html
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v4
       with:
@@ -52,10 +50,11 @@ jobs:
     - name: Build Release
       shell: bash
       run: |
-        hub release create ${{ steps.current-datetime.outputs.CURRENT_DATETIME }} \
-        -m ${{ steps.current-datetime.outputs.CURRENT_DATETIME }} \
-        -a out/${{ github.actor }}_resume.html \
-        -a out/${{ github.actor }}_resume.md \
-        -a out/${{ github.actor }}_resume.pdf
+        gh release create ${{ steps.current-datetime.outputs.CURRENT_DATETIME }} \
+        --title ${{ steps.current-datetime.outputs.CURRENT_DATETIME }} \
+        --notes "" \
+        out/resume.html \
+        out/resume.md \
+        out/resume.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
