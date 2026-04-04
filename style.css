@@ -299,12 +299,11 @@ ul li {
 }
 
 ul li::before {
-    content: "▸";
+    content: "–";
     position: absolute;
     left: -4px;
-    color: var(--accent);
-    font-size: 10px;
-    top: 1px;
+    color: var(--text-muted);
+    top: 0;
 }
 
 img {
@@ -367,49 +366,44 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--accent);
-    border-bottom: 1.5px solid var(--accent);
-    padding-bottom: 4px;
-    padding-left: 8px;
     margin: 24px 0 12px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-h2::before {
+h2::after {
     content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 4px;
-    width: 3px;
-    background: var(--accent);
-    border-radius: 2px;
+    flex: 1;
+    height: 1px;
+    background: var(--border);
 }
 
 /* --- Company / institution --- */
 
 h3 {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin: 16px 0 2px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 16px 0 1px;
+    letter-spacing: 0.01em;
 }
 
 /* --- Job title + dates --- */
 
 h5 {
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
     font-style: normal;
-    margin: 5px 0 5px;
-    letter-spacing: 0.01em;
+    margin: 3px 0 5px;
 }
 
 /* --- Italic descriptors (sub-context under companies) --- */
 
 em {
     color: var(--text-muted);
-    font-size: 12.5px;
+    font-size: 12px;
 }
 
 /* --- Skill tags --- */
@@ -443,14 +437,10 @@ code, tt {
     h2 {
         font-size: 9px;
         margin: 16px 0 8px;
-        padding-left: 0;
-        padding-bottom: 3px;
     }
 
-    h2::before { display: none; }
-
-    h3 { font-size: 12px; margin: 11px 0 2px; }
-    h5 { font-size: 11px; margin: 4px 0 4px; }
+    h3 { font-size: 10.5px; margin: 11px 0 1px; }
+    h5 { font-size: 12px; margin: 2px 0 4px; }
 
     p { margin: 4px 0; }
 
