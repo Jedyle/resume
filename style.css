@@ -244,17 +244,26 @@ table {
    Resume styles
    ========================================================================== */
 
+:root {
+    --accent: #1a3d6e;
+    --accent-light: #e8eef7;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --border: #cbd5e0;
+}
+
 html, body {
     margin: 0 auto;
     max-width: 860px;
-    color: #1a202c;
+    color: var(--text-primary);
     background: #fff;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     font-size: 13.5px;
-    line-height: 1.55;
+    line-height: 1.58;
     padding: 40px 48px;
     -webkit-font-smoothing: antialiased;
 }
@@ -266,7 +275,7 @@ body {
 }
 
 a {
-    color: #2b5797;
+    color: var(--accent);
     text-decoration: none;
 }
 
@@ -279,11 +288,23 @@ p {
 }
 
 ul {
-    padding-left: 20px;
+    padding-left: 18px;
+    list-style: none;
 }
 
 ul li {
-    margin: 3px 0;
+    margin: 4px 0;
+    position: relative;
+    padding-left: 12px;
+}
+
+ul li::before {
+    content: "▸";
+    position: absolute;
+    left: -4px;
+    color: var(--accent);
+    font-size: 10px;
+    top: 1px;
 }
 
 img {
@@ -293,12 +314,12 @@ img {
 /* --- Name --- */
 
 h1 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
-    color: #1a202c;
+    color: var(--text-primary);
     text-align: center;
-    letter-spacing: 0.02em;
-    margin-bottom: 4px;
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
 }
 
 /* --- Contact line --- */
@@ -306,13 +327,21 @@ h1 {
 h6 {
     font-size: 12px;
     font-weight: 400;
-    color: #4a5568;
+    color: var(--text-muted);
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
 }
 
 h6 a {
-    color: #4a5568;
+    color: var(--text-muted);
+    transition: color 0.15s;
+}
+
+h6 a:hover {
+    color: var(--accent);
+    text-decoration: none;
 }
 
 /* --- Summary / objective --- */
@@ -321,23 +350,39 @@ h4 {
     font-size: 13px;
     font-weight: 400;
     font-style: italic;
-    color: #2d3748;
+    color: var(--text-secondary);
     text-align: center;
-    margin: 0 0 20px;
-    line-height: 1.6;
+    margin: 16px 0 6px;
+    line-height: 1.65;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* --- Section headings --- */
 
 h2 {
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #2b5797;
-    border-bottom: 1.5px solid #2b5797;
-    padding-bottom: 3px;
-    margin: 22px 0 10px;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 4px;
+    padding-left: 8px;
+    margin: 24px 0 12px;
+    position: relative;
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 4px;
+    width: 3px;
+    background: var(--accent);
+    border-radius: 2px;
 }
 
 /* --- Company / institution --- */
@@ -345,18 +390,26 @@ h2 {
 h3 {
     font-size: 14px;
     font-weight: 700;
-    color: #1a202c;
-    margin: 14px 0 2px;
+    color: var(--text-primary);
+    margin: 16px 0 2px;
 }
 
 /* --- Job title + dates --- */
 
 h5 {
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 600;
-    color: #2d3748;
-    font-style: italic;
-    margin: 6px 0 4px;
+    color: var(--accent);
+    font-style: normal;
+    margin: 5px 0 5px;
+    letter-spacing: 0.01em;
+}
+
+/* --- Italic descriptors (sub-context under companies) --- */
+
+em {
+    color: var(--text-muted);
+    font-size: 12.5px;
 }
 
 /* --- Skill tags --- */
@@ -366,31 +419,51 @@ code, tt {
     margin: 2px 2px;
     padding: 1px 7px;
     font-family: inherit;
-    font-size: 12px;
-    color: #2d3748;
-    background-color: #edf2f7;
+    font-size: 11.5px;
+    color: var(--accent);
+    background-color: var(--accent-light);
     border-radius: 3px;
     white-space: nowrap;
+    border: 1px solid #c4d4eb;
 }
 
 /* --- Print --- */
 
 @media print {
     body {
-        padding: 20px 32px;
-        font-size: 12px;
+        padding: 16px 28px;
+        font-size: 11.5px;
+        line-height: 1.5;
     }
 
     h1 { font-size: 22px; }
-    h2 { font-size: 10px; }
+    h2 { font-size: 9.5px; }
+    h3 { font-size: 12.5px; margin: 12px 0 2px; }
+    h5 { font-size: 11.5px; }
+
+    h2::before {
+        display: none;
+    }
+
+    h2 {
+        padding-left: 0;
+    }
 
     a {
-        color: #1a202c;
+        color: var(--text-primary);
+    }
+
+    h6 a {
+        color: var(--text-muted);
     }
 
     code, tt {
-        background-color: #f0f0f0;
-        border: none;
+        background-color: #f0f4fa;
+        border: 1px solid #d0daea;
+    }
+
+    ul li::before {
+        color: #555;
     }
 }
 
