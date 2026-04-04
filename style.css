@@ -246,7 +246,6 @@ table {
 
 :root {
     --accent: #1a3d6e;
-    --accent-light: #e8eef7;
     --text-primary: #1a202c;
     --text-secondary: #4a5568;
     --text-muted: #718096;
@@ -406,20 +405,6 @@ em {
     font-size: 12px;
 }
 
-/* --- Skill tags --- */
-
-code, tt {
-    display: inline-block;
-    margin: 2px 2px;
-    padding: 1px 7px;
-    font-family: inherit;
-    font-size: 11.5px;
-    color: var(--accent);
-    background-color: var(--accent-light);
-    border-radius: 3px;
-    white-space: nowrap;
-    border: 1px solid #c4d4eb;
-}
 
 /* --- Print --- */
 
@@ -448,11 +433,6 @@ code, tt {
 
     a { color: var(--text-primary); }
     h6 a { color: var(--text-muted); }
-
-    code, tt {
-        background-color: #f0f4fa;
-        border: 1px solid #d0daea;
-    }
 
     ul li::before { color: #555; }
 }
