@@ -195,7 +195,6 @@ border-spacing: 0;
 
 :root {
 --accent: #1a3d6e;
---accent-light: #e8eef7;
 --text-primary: #1a202c;
 --text-secondary: #4a5568;
 --text-muted: #718096;
@@ -239,12 +238,11 @@ position: relative;
 padding-left: 12px;
 }
 ul li::before {
-content: "▸";
+content: "–";
 position: absolute;
 left: -4px;
-color: var(--accent);
-font-size: 10px;
-top: 1px;
+color: var(--text-muted);
+top: 0;
 }
 img {
 max-width: 100%;
@@ -296,86 +294,59 @@ font-weight: 700;
 text-transform: uppercase;
 letter-spacing: 0.12em;
 color: var(--accent);
-border-bottom: 1.5px solid var(--accent);
-padding-bottom: 4px;
-padding-left: 8px;
 margin: 24px 0 12px;
-position: relative;
+display: flex;
+align-items: center;
+gap: 8px;
 }
-h2::before {
+h2::after {
 content: "";
-position: absolute;
-left: 0;
-top: 0;
-bottom: 4px;
-width: 3px;
-background: var(--accent);
-border-radius: 2px;
+flex: 1;
+height: 1px;
+background: var(--border);
 }
 
 h3 {
-font-size: 14px;
-font-weight: 700;
-color: var(--text-primary);
-margin: 16px 0 2px;
+font-size: 12px;
+font-weight: 600;
+color: var(--text-secondary);
+margin: 16px 0 1px;
+letter-spacing: 0.01em;
 }
 
 h5 {
-font-size: 12.5px;
-font-weight: 600;
-color: var(--accent);
+font-size: 14px;
+font-weight: 700;
+color: var(--text-primary);
 font-style: normal;
-margin: 5px 0 5px;
-letter-spacing: 0.01em;
+margin: 3px 0 5px;
 }
 
 em {
 color: var(--text-muted);
-font-size: 12.5px;
-}
-
-code, tt {
-display: inline-block;
-margin: 2px 2px;
-padding: 1px 7px;
-font-family: inherit;
-font-size: 11.5px;
-color: var(--accent);
-background-color: var(--accent-light);
-border-radius: 3px;
-white-space: nowrap;
-border: 1px solid #c4d4eb;
+font-size: 12px;
 }
 
 @media print {
 body {
 padding: 16px 28px;
-font-size: 11.5px;
+font-size: 11px;
 line-height: 1.5;
 }
-h1 { font-size: 22px; }
-h2 { font-size: 9.5px; }
-h3 { font-size: 12.5px; margin: 12px 0 2px; }
-h5 { font-size: 11.5px; }
-h2::before {
-display: none;
-}
+h1 { font-size: 20px; margin-bottom: 4px; }
+h4 { font-size: 11.5px; margin: 10px auto 6px; line-height: 1.55; }
+h6 { padding-bottom: 10px; font-size: 11px; }
 h2 {
-padding-left: 0;
+font-size: 9px;
+margin: 16px 0 8px;
 }
-a {
-color: var(--text-primary);
-}
-h6 a {
-color: var(--text-muted);
-}
-code, tt {
-background-color: #f0f4fa;
-border: 1px solid #d0daea;
-}
-ul li::before {
-color: #555;
-}
+h3 { font-size: 10.5px; margin: 11px 0 1px; }
+h5 { font-size: 12px; margin: 2px 0 4px; }
+p { margin: 4px 0; }
+ul li { margin: 3px 0; }
+a { color: var(--text-primary); }
+h6 a { color: var(--text-muted); }
+ul li::before { color: #555; }
 }
 .author {
 display: none;
@@ -393,9 +364,9 @@ display: none;
 <h3 id="product-development">Product &amp; Development</h3>
 <p><strong>Languages:</strong> Python, JavaScript, TypeScript, C++ <strong>Backend:</strong> Django, Flask, REST API design, RabbitMQ <strong>Frontend:</strong> React, Next.js, Ionic <strong>Data:</strong> PostgreSQL, MySQL, Redis, Elasticsearch</p>
 <h3 id="cloud-delivery">Cloud &amp; Delivery</h3>
-<p><strong>Infra:</strong> AWS (strongest), GCP, Azure, Terraform, DigitalOcean <strong>Containers &amp; Orchestration:</strong> Docker, Kubernetes, Spinnaker <strong>CI/CD:</strong> Jenkins, GitHub Actions, GitLab CI, Ansible <strong>Observability:</strong> Prometheus, ELK, Sentry <strong>Security:</strong> AWS WAF, Cloudflare, Wazuh (SIEM), Tenable</p>
+<p><strong>Infra:</strong> AWS (strongest), GCP, Azure, OVH, Terraform (<a href="https://www.credly.com/badges/94d137f7-5a55-4aa3-a1b9-3cce9fa4bc13/linked_in_profile"><em>certified</em></a>), DigitalOcean <strong>Containers &amp; Orchestration:</strong> Docker, Kubernetes, Portainer <strong>CI/CD:</strong> Jenkins, GitHub Actions, GitLab CI, Ansible, Spinnaker <strong>Observability:</strong> Prometheus, ELK, Sentry <strong>Security:</strong> AWS WAF, Cloudflare, Wireguard, Wazuh (SIEM), Tenable</p>
 <h3 id="languages">Languages</h3>
-<p>French (native), English (fluent), Russian (B2), Italian (B2)</p>
+<p>French (native), English (fluent, IELTS 7.5 in 2017), Russian (B2), Italian (B2)</p>
 <h2 id="experience">Experience</h2>
 <h3 id="iraiser-nantes-france-freelance">iRaiser — Nantes, France (Freelance)</h3>
 <p><em>Consulting engagement via iPepper, another french consulting firm.</em></p>
@@ -417,7 +388,7 @@ display: none;
 <li>Built the MLOps pipeline from R&amp;D to production: reworked Python and Docker packaging, deployed on Kubernetes with Spinnaker</li>
 </ul>
 <h5 id="devops-architect-february-2020---july-2022">DevOps Architect, February 2020 - July 2022</h5>
-<p>Enabled rapid product iteration and platform reliabily after the company found the product-market fit.</p>
+<p>Enabled rapid product iteration and platform reliability after the company found the product-market fit.</p>
 <ul>
 <li>Designed a multi-cloud architecture to serve hundreds of deep learning models with zero-downtime deployments and autoscaling, and allowing to switch to any cloud provider between AWS, GCP and Azure in a few hours when necessary.</li>
 <li>Built the complete CI/CD and deployment pipeline for 20+ microservices from scratch (Jenkins, Docker, Kubernetes, Spinnaker, Terraform)</li>
@@ -425,20 +396,16 @@ display: none;
 </ul>
 <h5 id="software-engineer-october-2018---january-2020">Software Engineer, October 2018 - January 2020</h5>
 <p><em>Internship from October 2018 to April 2019, then as a permanent contract</em>.</p>
-<p>Assisted the CTO of the company to build its Minimal Viable product : a SaaS automating document processing for IDs, payment receipts, and so on through a synchronous deep learning API.</p>
+<p>Worked with the CTO to build the MVP: a SaaS automating document processing through deep learning APIs.</p>
 <ul>
 <li>Built Flask microservices for the computer vision SaaS platform: tagging tool for ML projects, statistics visualizer and created a Flask boilerplate automating SQL, Redis, RabbitMQ, REST API, and test setup — adopted across the team</li>
 <li>Developed microservices to serve complex sequences of Deep Learning models as REST APIs (Flask, Redis, RabbitMQ)</li>
 <li>Built internal platforms for customer account management, billing, and usage analytics</li>
 </ul>
-<h3 id="intern-at-scrime-music-research-center-bordeaux-france---summer-2017">Intern at SCRIME Music Research Center — Bordeaux, France - Summer 2017</h3>
-<ul>
-<li>Developed real-time music improvisation software for an embedded signal processing platform (Bela) in C++</li>
-</ul>
 <h2 id="projects">Projects</h2>
 <p>More projects to be found on my <a href="github.com/Jedyle">GitHub</a> and on my <a href="jeremylixandre.com/now/">Blog</a>.</p>
-<p><strong><a href="https://herodotus-app.com"><em>YashaApp - Flashcard Accelerator</em></a></strong></p>
-<p>I am fond of learning languages and I always try to optimize my learning time. I made this project primarily for myself, in order to optimize the time it takes to create high-quality flashcards for Anki. I complete it regularly with anything that I consider useful to improve my learning workflow. Tech stack : Flask - React JS</p>
+<p><strong><a href="https://yashaapp.com"><em>YashaApp - Flashcard Accelerator</em></a></strong></p>
+<p>Tool to accelerate the creation of high-quality Anki flashcards for language learning. Built for personal use, actively maintained. Tech stack: Flask, React.</p>
 <p><strong><a href="https://herodotus-app.com"><em>Herodotus — History Learning App</em></a></strong></p>
 <p>Built a full-stack history learning web app from idea to production, solo. Django REST Framework backend, Ionic React frontend, CI with GitHub Actions, deployed with Portainer and Docker Compose on DigitalOcean.</p>
 <h2 id="education">Education</h2>
@@ -446,9 +413,5 @@ display: none;
 <p><strong>Degree:</strong> Master’s in Software Engineering, with Distinction | <strong>Years:</strong> 2015–2018 | <strong>Location:</strong> Bordeaux, France</p>
 <h3 id="umeå-university">Umeå University</h3>
 <p><strong>Semester:</strong> AI, Computer Graphics, Optimization (grade: 4.5/5) | <strong>Years:</strong> 2017–2018 | <strong>Location:</strong> Umeå, Sweden</p>
-<h3 id="lycée-aux-lazaristes">Lycée aux Lazaristes</h3>
-<p><strong>Program:</strong> Preparation for French Engineering Schools | <strong>Years:</strong> 2013–2015 | <strong>Location:</strong> Lyon, France</p>
-<h2 id="certifications">Certifications</h2>
-<p><strong>HashiCorp Certified: Terraform Associate</strong> (2022) · <strong>IELTS</strong> Score: 7.5 (2017)</p>
 </body>
 </html>
