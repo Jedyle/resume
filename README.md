@@ -76,10 +76,6 @@ you will need to point the pages deployment to the `gh-pages` branch under the `
 You can customize the stylized PDF and HTML output by editing `style.css`.
 
 
-### Default Look
-
-![demo](./demo.png)
-
 
 ## Credits
 
