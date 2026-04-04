@@ -19,15 +19,15 @@ title: Jérémy Lixandre
 
 ### Cloud & Delivery
 
-**Infra:** AWS (strongest), GCP, Azure, Terraform, DigitalOcean
-**Containers & Orchestration:** Docker, Kubernetes, Spinnaker
-**CI/CD:** Jenkins, GitHub Actions, GitLab CI, Ansible
+**Infra:** AWS (strongest), GCP, Azure, OVH, Terraform ([*certified*](https://www.credly.com/badges/94d137f7-5a55-4aa3-a1b9-3cce9fa4bc13/linked_in_profile)), DigitalOcean
+**Containers & Orchestration:** Docker, Kubernetes, Portainer
+**CI/CD:** Jenkins, GitHub Actions, GitLab CI, Ansible, Spinnaker
 **Observability:** Prometheus, ELK, Sentry
-**Security:** AWS WAF, Cloudflare, Wazuh (SIEM), Tenable
+**Security:** AWS WAF, Cloudflare, Wireguard, Wazuh (SIEM), Tenable
 
 ### Languages
 
-French (native), English (fluent), Russian (B2), Italian (B2)
+French (native), English (fluent, IELTS 7.5 in 2017), Russian (B2), Italian (B2)
 
 ## Experience
 
@@ -57,7 +57,7 @@ Led a team of 3 DevOps Engineers for a startup serving hundreds of deep learning
 
 ##### DevOps Architect, February 2020 - July 2022
 
-Enabled rapid product iteration and platform reliabily after the company found the product-market fit.
+Enabled rapid product iteration and platform reliability after the company found the product-market fit.
 
 - Designed a multi-cloud architecture to serve hundreds of deep learning models with zero-downtime deployments and autoscaling, and allowing to switch to any cloud provider between AWS, GCP and Azure in a few hours when necessary.
 - Built the complete CI/CD and deployment pipeline for 20+ microservices from scratch (Jenkins, Docker, Kubernetes, Spinnaker, Terraform)
@@ -67,24 +67,19 @@ Enabled rapid product iteration and platform reliabily after the company found t
 
 *Internship from October 2018 to April 2019, then as a permanent contract*.
 
-Assisted the CTO of the company to build its Minimal Viable product : a SaaS automating document processing for IDs, payment receipts, and so on through a synchronous deep learning API.
+Worked with the CTO to build the MVP: a SaaS automating document processing through deep learning APIs.
 
 - Built Flask microservices for the computer vision SaaS platform: tagging tool for ML projects, statistics visualizer and created a Flask boilerplate automating SQL, Redis, RabbitMQ, REST API, and test setup — adopted across the team
 - Developed microservices to serve complex sequences of Deep Learning models as REST APIs (Flask, Redis, RabbitMQ)
 - Built internal platforms for customer account management, billing, and usage analytics
 
-### Intern at SCRIME Music Research Center — Bordeaux, France - Summer 2017
-
-- Developed real-time music improvisation software for an embedded signal processing platform (Bela) in C++
-
 ## Projects
 
 More projects to be found on my [GitHub](github.com/Jedyle) and on my [Blog](jeremylixandre.com/now/).
 
-**[*YashaApp - Flashcard Accelerator*](https://herodotus-app.com)**
+**[*YashaApp - Flashcard Accelerator*](https://yashaapp.com)**
 
-I am fond of learning languages and I always try to optimize my learning time. I made this project primarily for myself, in order to optimize the time it takes to create high-quality flashcards for Anki. I complete it regularly with anything that I consider useful to improve my learning workflow.
-Tech stack : Flask - React JS
+Tool to accelerate the creation of high-quality Anki flashcards for language learning. Built for personal use, actively maintained. Tech stack: Flask, React.
 
 **[*Herodotus — History Learning App*](https://herodotus-app.com)**
 
@@ -100,11 +95,4 @@ Built a full-stack history learning web app from idea to production, solo. Djang
 
 **Semester:** AI, Computer Graphics, Optimization (grade: 4.5/5) | **Years:** 2017–2018 | **Location:** Umeå, Sweden
 
-### Lycée aux Lazaristes
-
-**Program:** Preparation for French Engineering Schools | **Years:** 2013–2015 | **Location:** Lyon, France
-
-## Certifications
-
-**HashiCorp Certified: Terraform Associate** (2022) · **IELTS** Score: 7.5 (2017)
 
