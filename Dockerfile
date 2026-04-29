@@ -10,7 +10,11 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /resume
 
-COPY resume.md style.css ./
+ARG RESUME_FILE=resume.md
+ARG OUTPUT_NAME=resume
+
+COPY style.css ./
+COPY ${RESUME_FILE} resume.md
 
 RUN pandoc resume.md \
     -t html -f markdown \
@@ -20,4 +24,6 @@ RUN pandoc resume.md \
     --enable-local-file-access \
     resume.html resume.pdf
 
-CMD ["sh", "-c", "cp resume.html resume.pdf resume.md /out/"]
+ENV OUTPUT_NAME=${OUTPUT_NAME}
+
+CMD ["sh", "-c", "cp resume.html /out/${OUTPUT_NAME}.html && cp resume.pdf /out/${OUTPUT_NAME}.pdf"]
