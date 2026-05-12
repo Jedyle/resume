@@ -6,7 +6,7 @@ title: Jérémy Lixandre
 
 #### Technical leader with 8 years of experience building products and engineering teams from scratch. I thrive in early-stage environments where ownership is real and impact is visible.
 
-*Based in Rome, available for full remote positions worldwide.*
+*French, based in Rome, available for full remote positions worldwide.*
 
 ## Skills
 
