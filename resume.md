@@ -94,3 +94,7 @@ Built a full-stack history learning web app from idea to production, solo. Djang
 ### Umeå University
 
 **Semester:** AI, Computer Graphics, Optimization (grade: 4.5/5) | **Years:** 2017–2018 | **Location:** Umeå, Sweden
+
+### Lycée aux Lazaristes
+
+Preparation for French Engineering Schools | Bachelor-level maths and physics | **Years**: 2013–2015 | **Location**: Lyon, France
