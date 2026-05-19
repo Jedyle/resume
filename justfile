@@ -51,3 +51,37 @@ build-private-mlops phone:
         --build-arg OUTPUT_NAME=resume-mlops . && \
     docker run --rm -v "$(pwd)/out:/out" resume-builder-mlops; \
     rm resume-mlops.tmp.md
+
+# Build any markdown file as a CV (public version, no phone number).
+build-custom file output_dir="out":
+    #!/usr/bin/env bash
+    set -euo pipefail
+    name=$(basename "{{file}}" .md)
+    abs_file="$(realpath "{{file}}")"
+    abs_output="$(realpath -m "{{output_dir}}")"
+    mkdir -p "${abs_output}"
+    tmp_file="${name}-tmp.md"
+    sed "s/__PHONE_ENTRY__//" "${abs_file}" > "${tmp_file}"
+    docker build -t "resume-builder-custom" \
+        --build-arg RESUME_FILE="${tmp_file}" \
+        --build-arg OUTPUT_NAME="${name}" . && \
+    docker run --rm -v "${abs_output}:/out" resume-builder-custom
+    rm -f "${tmp_file}"
+    echo "Built: ${abs_output}/${name}.pdf"
+
+# Build any markdown file as a CV with phone number (private version for recruiters).
+build-custom-private file phone output_dir="out":
+    #!/usr/bin/env bash
+    set -euo pipefail
+    name=$(basename "{{file}}" .md)
+    abs_file="$(realpath "{{file}}")"
+    abs_output="$(realpath -m "{{output_dir}}")"
+    mkdir -p "${abs_output}"
+    tmp_file="${name}-tmp.md"
+    sed "s/__PHONE_ENTRY__/ - [ {{phone}} ]/" "${abs_file}" > "${tmp_file}"
+    docker build -t "resume-builder-custom" \
+        --build-arg RESUME_FILE="${tmp_file}" \
+        --build-arg OUTPUT_NAME="${name}" . && \
+    docker run --rm -v "${abs_output}:/out" resume-builder-custom
+    rm -f "${tmp_file}"
+    echo "Built: ${abs_output}/${name}.pdf"
