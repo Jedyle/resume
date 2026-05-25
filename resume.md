@@ -66,7 +66,7 @@ Joined a growing SaaS company with no cloud engineering capability. Built the en
 
 ## Projects
 
-**Personal AI Automation** — IaC platform (Terraform + Cloudflare, Ansible, Traefik) deploying a personal Claude Code + n8n + Obsidian workflow stack. Automates daily summaries, notes extractions from notebooks (OCR), language learning exports, and other personal routine tasks.
+**Personal AI Automation** — IaC platform (Terraform + Cloudflare, Ansible, Traefik) deploying a personal Claude Code + n8n + Obsidian workflow stack. Automates several personal routine tasks.
 
 **[YashaApp](https://yashaapp.com)** — Anki flashcard creation tool for language learners. Flask + React. Actively maintained and used.
 
