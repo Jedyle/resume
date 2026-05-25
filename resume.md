@@ -2,99 +2,80 @@
 title: Jérémy Lixandre
 ---
 
-###### [ [jeremylixandre.com](https://jeremylixandre.com) ] - [ [GitHub](https://github.com/Jedyle) ] - [ [LinkedIn](https://linkedin.com/in/jeremy-lixandre) ] - [ [jeremy.lixandre@pm.me](mailto:jeremy.lixandre@pm.me) ]__PHONE_ENTRY__
+###### [ [jeremylixandre.com](https://jeremylixandre.com) ] · [ [GitHub](https://github.com/Jedyle) ] · [ [LinkedIn](https://linkedin.com/in/jeremy-lixandre) ] · [ [jeremy.lixandre@pm.me](mailto:jeremy.lixandre@pm.me) ]__PHONE_ENTRY__
 
-#### Technical leader with 8 years of experience building products and engineering teams from scratch. I thrive in early-stage environments where ownership is real and impact is visible.
+#### Senior Cloud & Platform Engineer
 
-*French, based in Rome, available for full remote positions worldwide.*
+**Twice brought in to build cloud infrastructure from nothing — multi-cloud AI platform at Mindee, full Cloud & Security function at iRaiser. 8 years, AWS-first.**
+
+*Based in Rome — CET timezone — Available for remote EU roles.*
 
 ## Skills
 
-### Product & Development
+**Cloud:** AWS, GCP, Azure, Terraform, DigitalOcean, OVH
+**Platform:** Docker, Kubernetes (EKS, GKE), Jenkins, GitHub Actions, GitLab CI, Ansible, Spinnaker
+**Security:** AWS WAF, Cloudflare, Wireguard, Wazuh (SIEM), Tenable, VPN
+**Observability:** Prometheus, ELK, Sentry, CloudWatch
+**Backend:** Python, Django, Flask, JavaScript/TypeScript, PostgreSQL, MySQL, Redis, RabbitMQ, Elasticsearch
 
-**Languages:** Python, JavaScript, TypeScript, C++
-**Backend:** Django, Flask, REST API design, RabbitMQ
-**Frontend:** React, Next.js, Ionic
-**Data:** PostgreSQL, MySQL, Redis, Elasticsearch
+## Certifications
 
-### Cloud & Delivery
+- AWS Solutions Architect Associate (SAA-C03)
+- HashiCorp Terraform Associate — [Credly](https://www.credly.com/badges/94d137f7-5a55-4aa3-a1b9-3cce9fa4bc13/linked_in_profile)
 
-**Infra:** AWS (strongest), GCP, Azure, OVH, Terraform ([*certified*](https://www.credly.com/badges/94d137f7-5a55-4aa3-a1b9-3cce9fa4bc13/linked_in_profile)), DigitalOcean
-**Containers & Orchestration:** Docker, Kubernetes, Portainer
-**CI/CD:** Jenkins, GitHub Actions, GitLab CI, Ansible, Spinnaker
-**Observability:** Prometheus, ELK, Sentry
-**Security:** AWS WAF, Cloudflare, Wireguard, Wazuh (SIEM), Tenable
+## Languages
 
-### Languages
-
-French (native), English (fluent, IELTS 7.5 in 2017), Russian (B2), Italian (B2)
+French (native) · English (fluent) · Russian (B2) · Italian (B2)
 
 ## Experience
 
-### iRaiser — Nantes, France (Freelance)
+### Independent — Cloud & DevOps Consulting
 
-*Consulting engagement via iPepper, another french consulting firm.*
+##### Freelance Consultant, January 2026 – Present
 
-##### Manager, Cloud & Security Team, October 2023 - December 2025
+- Pursued AWS Solutions Architect Associate certification (SAA-C03)
+- Architecture reviews and DevOps advisory for small teams
 
-Joined a SaaS company serving 1,000+ charity organizations that had no cloud engineering presence for years. Built the entire cloud capability from the ground up — both the platform and the team.
+### iRaiser — Nantes, France
 
-- Scaled the donation platform to handle 200+ transactions per second during peak charity events, directly enabling major fundraising campaigns
-- Built and mentored a Cloud & Security team from scratch, establishing cross-team collaboration and long-term platform ownership
-- Migrated 10+ critical bare-metal servers and production databases to AWS (including GitLab to gitlab.com, RDS architecture), improving reliability and reducing operational burden
-- Delivered company-wide security posture: AWS WAF, VPN (Wireguard and AWS VPN) Cloudflare, ISSP, incident response plans, SIEM (Wazuh), and exposure management (Tenable)
-- Automated onboarding and management of 1,000+ customer environments in a single-tenant architecture
+*SaaS platform serving 1,000+ charity organizations across Europe.*
 
-### Mindee (Computer Vision Startup) — Paris, France
+##### Contract — Cloud & Security Manager, October 2023 – December 2025
 
-##### Lead DevOps, August 2022 - June 2023
+Joined a growing SaaS company with no cloud engineering capability. Built the entire cloud and security function from scratch — team, tooling, and processes.
 
-Led a team of 3 DevOps Engineers for a startup serving hundreds of deep learning models as APIs.
+- Scaled the donation platform to **200+ transactions per second** during peak fundraising events — direct revenue impact for 1,000+ charities
+- Built and led a Cloud & Security team from scratch; established cross-team ownership and on-call processes
+- Migrated 10+ bare-metal production servers and databases to AWS (Aurora MySQL, RDS, GitLab → gitlab.com), reducing operational toil and improving reliability
+- Delivered full security posture: AWS WAF, Cloudflare CDN, VPN (Wireguard + AWS VPN), SIEM (Wazuh), exposure management (Tenable), incident response plans
+- Automated provisioning and management of **1,000+ single-tenant customer environments** using Ansible and DynamoDB-backed dynamic inventory
 
-- Managed the DevOps team end-to-end: planning, execution, hiring (created technical assessments, conducted interviews)
-- Designed and executed the migration of deep learning inference clusters from AWS to GCP
-- Built the MLOps pipeline from R&D to production: reworked Python and Docker packaging, deployed on Kubernetes with Spinnaker
+### Mindee (AI Document Processing Startup) — Paris, France
 
-##### DevOps Architect, February 2020 - July 2022
+##### Lead DevOps → DevOps Architect → Software Engineer | October 2018 – June 2023
 
-Enabled rapid product iteration and platform reliability after the company found the product-market fit.
+*Joined as intern, promoted twice over 5 years.*
 
-- Designed a multi-cloud architecture to serve hundreds of deep learning models with zero-downtime deployments and autoscaling, and allowing to switch to any cloud provider between AWS, GCP and Azure in a few hours when necessary.
-- Built the complete CI/CD and deployment pipeline for 20+ microservices from scratch (Jenkins, Docker, Kubernetes, Spinnaker, Terraform)
-- Developed a custom load-testing framework in Python to validate deep learning API performance before production releases
-
-##### Software Engineer, October 2018 - January 2020
-
-*Internship from October 2018 to April 2019, then as a permanent contract*.
-
-Worked with the CTO to build the MVP: a SaaS automating document processing through deep learning APIs.
-
-- Built Flask microservices for the computer vision SaaS platform: tagging tool for ML projects, statistics visualizer and created a Flask boilerplate automating SQL, Redis, RabbitMQ, REST API, and test setup — adopted across the team
-- Developed microservices to serve complex sequences of Deep Learning models as REST APIs (Flask, Redis, RabbitMQ)
-- Built internal platforms for customer account management, billing, and usage analytics
+- Led a team of 3 DevOps engineers: planning, execution, hiring
+- Migrated ML serving infrastructure from AWS to GCP with zero downtime
+- Designed multi-cloud platform (AWS/GCP/Azure) for hundreds of AI models — zero-downtime deployments, autoscaling, cloud-provider switchable in hours
+- Built CI/CD pipeline for 20+ microservices from scratch (Jenkins, Docker, Kubernetes, Spinnaker, Terraform)
+- Led cloud cost optimization: replaced on-demand with spot instances across all three clouds; ran monthly cost reviews with the CTO
+- Built Flask microservices for the document processing platform (tagging, billing, analytics)
+- Created a Flask boilerplate (DB, cache, messaging, REST API, tests) adopted across the team
 
 ## Projects
 
-More projects to be found on my [GitHub](github.com/Jedyle) and on my [Blog](jeremylixandre.com/now/).
+**Personal AI Automation** — IaC platform (Terraform + Cloudflare, Ansible, Traefik) deploying a personal Claude Code + n8n + Obsidian workflow stack. Automates daily summaries, notes extractions from notebooks (OCR), language learning exports, and other personal routine tasks.
 
-**[*YashaApp - Flashcard Accelerator*](https://yashaapp.com)**
+**[YashaApp](https://yashaapp.com)** — Anki flashcard creation tool for language learners. Flask + React. Actively maintained and used.
 
-Tool to accelerate the creation of high-quality Anki flashcards for language learning. Built for personal use, actively maintained. Tech stack: Flask, React.
-
-**[*Herodotus — History Learning App*](https://herodotus-app.com)**
-
-Built a full-stack history learning web app from idea to production, solo. Django REST Framework backend, Ionic React frontend, CI with GitHub Actions, deployed with Portainer and Docker Compose on DigitalOcean.
+**[Herodotus](https://herodotus-app.com)** — History learning web app, built solo from idea to production. Django REST + Ionic React, CI with GitHub Actions, Docker Compose on DigitalOcean. +2000 users registered.
 
 ## Education
 
 ### Polytechnic Institute of Bordeaux (ENSEIRB-MATMECA)
-
-**Degree:** Master's in Software Engineering, with Distinction | **Years:** 2015–2018 | **Location:** Bordeaux, France
+**Master's in Software Engineering**, with Distinction | 2015–2018 | Bordeaux, France
 
 ### Umeå University
-
-**Semester:** AI, Computer Graphics, Optimization (grade: 4.5/5) | **Years:** 2017–2018 | **Location:** Umeå, Sweden
-
-### Lycée aux Lazaristes
-
-Preparation for French Engineering Schools | Bachelor-level maths and physics | **Years**: 2013–2015 | **Location**: Lyon, France
+Exchange semester — AI, Computer Graphics, Optimization (4.5/5) | 2017–2018 | Umeå, Sweden
