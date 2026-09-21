@@ -1,40 +1,31 @@
 ---
 title: Jérémy Lixandre
-company: EdTech / Language Learning / Personal Development
-role: Spontaneous Application
-generated: 2026-06-30
-base: resume.md
+generated: 2026-09-21
+base: founding-engineer-startup
 ---
 
 ###### [ [jeremylixandre.com](https://jeremylixandre.com) ] · [ [GitHub](https://github.com/Jedyle) ] · [ [LinkedIn](https://linkedin.com/in/jeremy-lixandre) ] · [ [jeremy.lixandre@pm.me](mailto:jeremy.lixandre@pm.me) ]__PHONE_ENTRY__
 
-#### Software Engineer — Language Learning & EdTech
+#### Founding Engineer — Full-Stack, Cloud & AI
 
-**8 years shipping production systems at AI and SaaS startups — seeking to apply my knowledge to ambitious educational projects.**
+**Founder of a live AI language-learning product and builder of cloud and security functions from scratch at two SaaS/AI startups — 8 years, from first commit to 1,000+ customers.**
 
 *Based in Rome — CET timezone — Available for full remote EU roles.*
 
-## Languages
-
-French (native) · English (fluent) · Russian (B2) · Italian (B2)
-
 ## Projects
 
-**[Tools for Language Learning](https://jeremylixandre.com/tools-for-language-learning/)**
-- **[YashaApp](https://yashaapp.com)** — Anki flashcard creation tool for language learners. 16 languages supported, open source. Flask + React, actively maintained and used in my own spaced-repetition practice.
-- **[TutorHelper](https://tutor.jedyle.dev/landing)** - prototype currently tested with private language tutors to improve their workflow and generate recaps, flashcards and exercises for their students in seconds.
-
-**[Herodotus](https://herodotus-app.com)** — History learning web app, built solo from idea to production. Django REST + Ionic React, CI with GitHub Actions, Docker Compose on DigitalOcean. 2,000+ registered users.
-
-**Personal AI Automation** — IaC platform (Terraform + Cloudflare, Ansible, Traefik) deploying a Claude Code + n8n + Obsidian stack to automate personal knowledge management workflows.
+- **[NoteWell](https://getnotewell.com)** — *Founder, since June 2026.* AI tool that turns a language tutor's raw lesson notes into recaps, Anki cards, interactive exercises and a per-student memory of recurring mistakes. Live, open to the public and to donations. FastAPI, Docker, DigitalOcean, Claude for the AI layer.
+- **[YashaApp](https://yashaapp.com)** — Anki flashcard creation tool for language learners, 16 languages, open source. Flask + React, actively maintained and used in my own spaced-repetition practice.
+- **[Herodotus](https://herodotus-app.com)** — History learning web app, built solo from idea to production. Django REST + Ionic React, GitHub Actions CI, Docker Compose on DigitalOcean. **2,000+ registered users.**
+- **Personal AI Automation** — IaC platform (Terraform + Cloudflare, Ansible, Traefik) running a Claude Code + n8n + Obsidian stack for knowledge management.
 
 ## Skills
 
-**Backend:** Python, Django, Flask, JavaScript/TypeScript, PostgreSQL, MySQL, Redis, RabbitMQ, Elasticsearch
-**Cloud:** AWS, GCP, Azure, Terraform, DigitalOcean, OVH
-**Platform:** Docker, Kubernetes (EKS, GKE), Jenkins, GitHub Actions, GitLab CI, Ansible, Spinnaker
+**Backend & Product:** Python, FastAPI, Django, Flask, JavaScript/TypeScript, React, PostgreSQL, MySQL, Redis, RabbitMQ, Elasticsearch
+**AI:** Claude API integration, ML model serving at scale (Mindee), training-data labeling
+**Cloud & Platform:** AWS (EKS, Aurora, Lambda, DynamoDB), GCP, Azure, Terraform, Docker, Kubernetes, GitHub Actions, GitLab CI, Ansible
+**Security & Privacy:** GDPR, AWS WAF, Cloudflare, Wireguard, Wazuh (SIEM), Tenable, AWS IAM/SSO, JWT
 **Observability:** Prometheus, ELK, Sentry, CloudWatch
-**Security:** AWS WAF, Cloudflare, Wireguard, Wazuh (SIEM), Tenable, VPN
 
 ## Certifications
 
@@ -45,9 +36,8 @@ French (native) · English (fluent) · Russian (B2) · Italian (B2)
 
 ### Independent Work & Professional Development — Jan. 2026 – Present
 
+- Cloud advisory for two early-stage startups — provider selection, architecture, tooling
 - Obtained the **AWS Solutions Architect – Associate** certification (SAA-C03)
-- Occasional cloud advisory for two early-stage startups — provider selection, architecture, tooling
-- Personal projects in active production — see Projects section
 
 ### iRaiser — Nantes, France
 
@@ -57,10 +47,11 @@ French (native) · English (fluent) · Russian (B2) · Italian (B2)
 
 Joined a growing SaaS company with no cloud engineering capability. Built the entire cloud and security function from scratch — team, tooling, and processes.
 
+- Built and led a Cloud & Security team from scratch; established cross-team ownership and on-call processes
 - Scaled the donation platform to **200+ transactions per second** during peak fundraising events — direct revenue impact for 1,000+ charities
+- Delivered the security posture: AWS WAF + CloudFront, Wireguard VPN, Wazuh SIEM, IAM/SSO governance, GDPR compliance oversight with Tenable
 - Automated provisioning and management of **1,000+ single-tenant customer environments** using Ansible and DynamoDB-backed dynamic inventory
 - Migrated 10+ bare-metal production servers and databases to AWS (Aurora MySQL, RDS, GitLab → gitlab.com)
-- Built and led a Cloud & Security team from scratch; established cross-team ownership and on-call processes
 
 ### Mindee (AI Document Processing Startup) — Paris, France
 
@@ -68,11 +59,11 @@ Joined a growing SaaS company with no cloud engineering capability. Built the en
 
 *Joined as intern, promoted twice over 5 years.*
 
-- Built Flask microservices for the document processing platform (tagging, billing, analytics)
-- Created a Flask boilerplate (DB, cache, messaging, REST API, tests) adopted across the team
 - Designed multi-cloud platform (AWS/GCP/Azure) for hundreds of AI models — zero-downtime deployments, autoscaling, cloud-provider switchable in hours
+- Built Flask microservices for the document processing platform (tagging, billing, analytics) with JWT auth, plus a Flask boilerplate adopted across the team
 - Built CI/CD pipeline for 20+ microservices from scratch (Jenkins, Docker, Kubernetes, Spinnaker, Terraform)
-- Led a team of 3 DevOps engineers: planning, execution, hiring
+- Led a team of 3 DevOps engineers: planning, execution, hiring; monthly cloud cost reviews with the CTO
+- Labeled documents to train the in-house computer-vision models
 
 ## Education
 
@@ -81,3 +72,7 @@ Joined a growing SaaS company with no cloud engineering capability. Built the en
 
 ### Umeå University
 Exchange semester — AI, Computer Graphics, Optimization (4.5/5) | 2017–2018 | Umeå, Sweden
+
+## Languages
+
+French (native) · English (fluent) · Russian (B2) · Italian (B2, CILS C1 in preparation)
