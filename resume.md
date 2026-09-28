@@ -8,15 +8,15 @@ base: founding-engineer-startup
 
 #### Founding Engineer — Cloud, Platform & Full-Stack
 
-**Grew from intern to Lead DevOps at an AI startup, then built a SaaS company's cloud and security function from scratch (1,000+ customers) — looking to join mission-driven teams in EdTech, computational social science or privacy.**
+**Grew from intern to Lead DevOps at an AI startup, then built a SaaS company's cloud and security function from scratch (1,000+ customers) — looking to join an ambitious early-stage project.**
 
-*Based in Rome — CET timezone — Available for full remote EU roles.*
+*Based in Rome — CET timezone.*
 
 ## Experience
 
 ### Independent Work & Professional Development — Jan. 2026 – Present
 
-- Cloud advisory for two early-stage startups — provider selection, architecture, tooling
+- Cloud advisory for early-stage startups and bigger structures — provider selection, architecture, tooling
 - Founded two EdTech projects for language learning (see projects section below).
 - Obtained the **AWS Solutions Architect – Associate** certification (SAA-C03)
 
