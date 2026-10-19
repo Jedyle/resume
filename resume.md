@@ -8,7 +8,7 @@ base: Resume_SWE__English_.pdf (2025-08) + founding-engineer-startup
 
 #### Founding Engineer — Cloud, Platform & Full-Stack
 
-**Grew from intern to Lead DevOps at an AI startup, then built a SaaS company's cloud and security function from scratch (1,000+ customers). Looking to join an ambitious early-stage project.**
+**Grew from intern to Lead DevOps at an AI startup, then built a SaaS company's cloud and security function from scratch. Looking to join an ambitious early-stage project.**
 
 *Based in Rome, CET timezone.*
 
